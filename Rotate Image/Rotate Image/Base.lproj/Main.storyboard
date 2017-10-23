@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rotate_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="addyourimg" translatesAutoresizingMaskIntoConstraints="NO" id="F65-du-4oF">
+                                <rect key="frame" x="26" y="101" width="322" height="221"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-7x-iwa">
+                                <rect key="frame" x="56" y="360" width="64" height="64"/>
+                                <state key="normal" image="picture"/>
+                                <connections>
+                                    <action selector="btnBrowseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sp-cW-Umf"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7E-vQ-RjZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="180 Derajat" id="hPO-SM-UM8"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-lR-yR3">
+                                <rect key="frame" x="250" y="360" width="64" height="64"/>
+                                <state key="normal" image="icon"/>
+                                <connections>
+                                    <action selector="btnRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A84-eF-F1d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T1x-7x-iwa" secondAttribute="bottom" constant="243" id="2rB-Ad-kWC"/>
+                            <constraint firstItem="F65-du-4oF" firstAttribute="top" secondItem="x7E-vQ-RjZ" secondAttribute="bottom" constant="29" id="6eS-4x-GXc"/>
+                            <constraint firstItem="x7E-vQ-RjZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AR4-aX-JD1"/>
+                            <constraint firstItem="x7E-vQ-RjZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="J6y-MN-6ld"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3uG-lR-yR3" secondAttribute="trailing" constant="61" id="LLo-EQ-8ZO"/>
+                            <constraint firstItem="x7E-vQ-RjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Omv-u5-rX0"/>
+                            <constraint firstItem="F65-du-4oF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="SMq-xt-Lnr"/>
+                            <constraint firstItem="3uG-lR-yR3" firstAttribute="leading" secondItem="T1x-7x-iwa" secondAttribute="trailing" constant="130" id="XWY-KI-0za"/>
+                            <constraint firstItem="F65-du-4oF" firstAttribute="centerX" secondItem="x7E-vQ-RjZ" secondAttribute="centerX" id="Xlh-D4-7dr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F65-du-4oF" secondAttribute="trailing" constant="27" id="XoT-Ym-A4v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3uG-lR-yR3" secondAttribute="bottom" constant="243" id="Yhf-cy-MCN"/>
+                            <constraint firstItem="3uG-lR-yR3" firstAttribute="leading" secondItem="T1x-7x-iwa" secondAttribute="trailing" constant="130" id="bRx-Y5-rYa"/>
+                            <constraint firstItem="3uG-lR-yR3" firstAttribute="top" secondItem="F65-du-4oF" secondAttribute="bottom" constant="38" id="jdY-st-un4"/>
+                            <constraint firstItem="F65-du-4oF" firstAttribute="top" secondItem="x7E-vQ-RjZ" secondAttribute="bottom" constant="29" id="rhX-XB-Qq4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgPreview" destination="F65-du-4oF" id="pUK-wa-Chu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addyourimg" width="324" height="324"/>
+        <image name="icon" width="64" height="64"/>
+        <image name="picture" width="64" height="64"/>
+    </resources>
+</document>
